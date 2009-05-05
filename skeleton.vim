@@ -37,3 +37,8 @@ endfunction
 function Skeleton(pattern)
     exe "autocmd BufNewFile ".a:pattern." silent call s:read_skeleton(\"".a:pattern."\")"
 endfunction
+
+for pattern in g:Skeleton_patterns
+    call Skeleton(pattern)
+endfor
+unlet pattern
